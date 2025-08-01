@@ -29,7 +29,14 @@ import { Cliente } from '../cadastro/cliente';
 export class ConsultaComponent implements OnInit {
   nomeBusca: string = '';
   listaClientes: Cliente[] = [];
-  colunasTable: string[] = ["id", "nome", "cpf", "dataNascimento", "email"];
+  colunasTable: string[] = [
+    "id",
+    "nome",
+    "cpf",
+    "dataNascimento",
+    "email",
+    "acao"
+  ];
 
   constructor(private service: ClienteService){
 
@@ -41,5 +48,9 @@ export class ConsultaComponent implements OnInit {
 
   pesquisar(){
     this.listaClientes = this.service.pesquisarClientes(this.nomeBusca)
+  }
+
+  preparaEditar(id: string){
+    console.log("ID RECEBIDO:", id)
   }
 }
