@@ -9,6 +9,7 @@ import { MatTableModule } from '@angular/material/table'
 import { MatButtonModule } from '@angular/material/button';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from '../cadastro/cliente';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -35,10 +36,13 @@ export class ConsultaComponent implements OnInit {
     "cpf",
     "dataNascimento",
     "email",
-    "acao"
+    "acoes"
   ];
 
-  constructor(private service: ClienteService){
+  constructor(
+    private service: ClienteService,
+    private router: Router 
+  ){
 
   }
 
@@ -51,6 +55,6 @@ export class ConsultaComponent implements OnInit {
   }
 
   preparaEditar(id: string){
-    console.log("ID RECEBIDO:", id)
+    this.router.navigate(['/cadastro'], { queryParams:{"id": id } } )
   }
 }

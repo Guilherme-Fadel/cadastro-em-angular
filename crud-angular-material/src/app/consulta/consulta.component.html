@@ -60,7 +60,7 @@
                             <td mat-cell *matCellDef="let cliente">{{ cliente.email }}</td>
                         </ng-container>
 
-                        <ng-container matColumnDef="acao">
+                        <ng-container matColumnDef="acoes">
                             <th mat-header-cell *matHeaderCellDef></th>
                             <td mat-cell *matCellDef="let cliente">
                                 <button type="button" mat-button (click)="preparaEditar(cliente.id)">
