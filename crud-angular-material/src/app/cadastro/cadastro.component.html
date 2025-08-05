@@ -42,11 +42,10 @@
                     <div fxLayout="row" fxLayoutAlign="start" fxLayoutgap="16px">
                         <div fxLayout="column" fxFlex="400px">
                             <mat-form-field class="full-width">
-                                <mat-label>Data Nascimento: *</mat-label>
-                                <input   type="text"
-                                        [(ngModel)]="cliente.dataNascimento"
-                                        name="dataNascimento"
-                                        placeholder="Digite sua data de nascimento" matInput />
+                                <mat-label>Data de Nascimento: *</mat-label>
+                                <input matInput [matDatepicker]="picker" [(ngModel)]="cliente.dataNascimento" name="dataNascimento"/>
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
                             </mat-form-field>
                         </div>
                     </div>
