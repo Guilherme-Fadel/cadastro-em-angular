@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from '../cadastro/cliente';
 import { Router } from '@angular/router';
+import { CpfmaskPipe } from '../app.component';
 
 
 @Component({
@@ -22,7 +23,8 @@ import { Router } from '@angular/router';
     MatButtonModule,
     FlexLayoutModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    CpfmaskPipe
   ],
   templateUrl: './consulta.component.html',
   styleUrl: './consulta.component.scss'
@@ -38,7 +40,7 @@ export class ConsultaComponent implements OnInit {
     "email",
     "acoes"
   ];
-
+  
   constructor(
     private service: ClienteService,
     private router: Router 
