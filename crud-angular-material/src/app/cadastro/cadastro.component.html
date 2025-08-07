@@ -6,7 +6,7 @@
                     <mat-card-title>Dados Pessoais</mat-card-title>
                 </mat-card-header>
                 <mat-card-content class="mt-20">
-                    <div fxLayout="row" fxLayoutAlign="start" fxLayoutgap="16px">
+                    <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="16px">
                         <div fxLayout="column" fxFlex="800px">
                             <mat-form-field class="full-width">
                                 <mat-label>Nome: *</mat-label>
@@ -17,7 +17,7 @@
                             </mat-form-field>
                         </div>
                     </div>
-                    <div fxLayout="row" fxLayoutAlign="start" fxLayoutgap="16px">
+                    <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="16px">
                           <div fxLayout="column" fxFlex="800px">
                             <mat-form-field class="full-width">
                                 <mat-label>E-mail: *</mat-label>
@@ -28,7 +28,7 @@
                             </mat-form-field>
                         </div>
                     </div>
-                    <div fxLayout="row" fxLayoutAlign="start" fxLayoutgap="16px">
+                    <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="16px">
                         <div fxLayout="column" fxFlex="400px">
                             <mat-form-field class="full-width">
                                 <mat-label>CPF: *</mat-label>
@@ -39,11 +39,15 @@
                             </mat-form-field>
                         </div>
                     </div>
-                    <div fxLayout="row" fxLayoutAlign="start" fxLayoutgap="16px">
+                    <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="16px">
                         <div fxLayout="column" fxFlex="400px">
                             <mat-form-field class="full-width">
                                 <mat-label>Data de Nascimento: *</mat-label>
-                                <input matInput [matDatepicker]="picker" [(ngModel)]="cliente.dataNascimento" name="dataNascimento"/>
+                                <input  matInput
+                                        [matDatepicker]="picker" 
+                                        [(ngModel)]="cliente.dataNascimento" 
+                                        name="dataNascimento"
+                                        >
                                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                                 <mat-datepicker #picker></mat-datepicker>
                             </mat-form-field>
