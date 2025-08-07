@@ -3,7 +3,6 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { NgxMaskDirective } from 'ngx-mask';
 
 
 @Component({
@@ -13,8 +12,7 @@ import { NgxMaskDirective } from 'ngx-mask';
     RouterLink, 
     MatToolbarModule, 
     MatIconModule,
-    MatButtonModule,
-    NgxMaskDirective
+    MatButtonModule
   ],
 
   templateUrl: './app.component.html',
