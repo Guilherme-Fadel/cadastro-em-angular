@@ -45,12 +45,10 @@
                             <mat-form-field class="full-width">
                                 <mat-label>Data de Nascimento: *</mat-label>
                                 <input  matInput
-                                        [matDatepicker]="picker" 
+                                        mask="00/00/0000"
                                         [(ngModel)]="cliente.dataNascimento" 
                                         name="dataNascimento"
                                         >
-                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
                             </mat-form-field>
                         </div>
                     </div>
