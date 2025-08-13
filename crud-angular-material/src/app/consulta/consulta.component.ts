@@ -40,7 +40,6 @@ export class ConsultaComponent implements OnInit {
     "email",
     "acoes"
   ];
-  deletando: boolean = false;
   
   constructor(
     private service: ClienteService,
@@ -61,13 +60,12 @@ export class ConsultaComponent implements OnInit {
     this.router.navigate(['/cadastro'], { queryParams:{"id": id } } )
   }
 
-  preparaDeletar(){
-    this.deletando = true;
+  preparaDeletar(cliente: Cliente){
+    cliente.deletando = true;
   }
 
   deletar(cliente: Cliente){
     this.service.deletar(cliente);
     this.listaClientes = this.service.pesquisarClientes('');
-    this.deletando = false
   }
 }
